@@ -14,3 +14,5 @@ ATSE Infineon repository
   
 # Evaluating converted .tflite model - tflite_evaluate.py
   Evaluate accuracy of your .tflite model. Please, compare .tflite accuracy of your model to previous not converted model.
+  
+# Our dataset - TAK_NI_Dataset_ATSE_YABE.zip
