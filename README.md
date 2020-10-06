@@ -16,23 +16,6 @@
                             *labels* - [1, 0] equal to "Yes"
                                      - [0, 1] equal to "No"
   For training, we rescalling array *datas* to 0..1 range for better perfmonace.
-  Model: "sequential"
-  _________________________________________________________________
-  Layer (type)                 Output Shape              Param #
-  =================================================================
-  conv2d (Conv2D)              (None, 248, 62, 1)        10
-  _________________________________________________________________
-  max_pooling2d (MaxPooling2D) (None, 124, 31, 1)        0
-  _________________________________________________________________
-  re_lu (ReLU)                 (None, 124, 31, 1)        0
-  _________________________________________________________________
-  flatten (Flatten)            (None, 3844)              0
-  _________________________________________________________________
-  dense (Dense)                (None, 2)                 7690
-  =================================================================
-  Total params: 7,700
-  Trainable params: 7,700
-  Non-trainable params: 0
   
   
 ## Quantized.py - Quantize and convert to .tflite
