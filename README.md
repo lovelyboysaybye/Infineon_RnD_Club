@@ -1,10 +1,12 @@
-# Infineon_RnD_Club
-ATSE Infineon repository
+# Micro Speech Neural Network repository
 
-# TensorFlow model - Our_Con.py
-  Tensorflow 2.X - Convolutional model for recognise Tak/Ni spectrogram.
-  You should try other architecture of model, and write comparasion of them.
-  For faster and better training, we scaling our dataset values to 0..1 float range.
+# Requirements:
+  * tensorflow             2.3.1
+
+# TensorFlow model - Float_NN.py
+  ## *Tensorflow 2.X - Convolutional model for recognise Tak/Ni spectrogram.*
+  By using multiprocessing, now we can prepare our dataset **x4 - x8** faster!
+  
   
 # Converting Saved Trained TensorFlow model to .tflite formal - to_tflite.py
   You can convert your saved model using this file.
