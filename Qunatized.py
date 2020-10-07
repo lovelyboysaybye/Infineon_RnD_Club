@@ -76,7 +76,7 @@ def representative_dataset_gen():
     """ -------------ATTENTION--------------- """
     """ ---Only there we can change type----- """
     """ ---and range of our values!---------- """
-    datas = np.array(datas).astype(np.float32) / 512 # ATTENTION! Onl
+    datas = np.array(datas).astype(np.float32) / 256 # ATTENTION! Onl
     
     my_ds = tf.data.Dataset.from_tensor_slices(datas).batch(1)
 
@@ -91,7 +91,7 @@ if __name__ == '__main__':
     converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
     
     """ ---Set data type of input and output- """
-    converter.inference_input_type = tf.float32
+    converter.inference_input_type = tf.int8
     converter.inference_output_type = tf.int8
    
     converter.representative_dataset = representative_dataset_gen
