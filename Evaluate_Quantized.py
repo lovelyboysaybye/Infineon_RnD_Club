@@ -55,7 +55,7 @@ def Split_Datasets(dataset):
 
 
 if __name__ == "__main__":
-    interpreter_quant = tf.lite.Interpreter(model_path = str(r'F:\WORK_TF\PythonApplication1\PythonApplication1\convolutional_model\10\Converted\converted_model.tflite'))
+    interpreter_quant = tf.lite.Interpreter(model_path = str(r'F:\WORK_TF\PythonApplication1\PythonApplication1\convolutional_model\12\Converted\converted_model.tflite'))
     interpreter_quant.allocate_tensors()
 
     input_index = interpreter_quant.get_input_details()[0]["index"]
@@ -74,7 +74,7 @@ if __name__ == "__main__":
     """ -------------ATTENTION--------------- """
     """ ---Only there we can change type----- """
     """ ---and range of our values!---------- """
-    datas = (np.array(datas).astype(np.float32) / 512).astype(np.float32)   # last .astype() - convert to correct type
+    datas = (np.array(datas).astype(np.float32) / 256 - 128).astype(np.int8)   # last .astype() - convert to correct type
     labels= np.array(labels).astype(np.int8)
 
     accuracy = 0
